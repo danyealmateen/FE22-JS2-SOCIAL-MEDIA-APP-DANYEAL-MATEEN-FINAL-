@@ -17,10 +17,13 @@ async function displayUsers() {
     });
 }
 function displayClickedUser(userValues) {
-    // const selectedUser = document.getElementById('selectedUser');
+    let statusUpdate = "";
+    userValues.statusUpdates.forEach((update) => {
+        statusUpdate += `<br>${update.message} `;
+    });
     profileInfoContainer.innerHTML = `
 <img id="profileIMG" src="${userValues.imageURL}"/><br>
 <div>Userprofile: </div><div id="selectedUser">${userValues.username}</div><br>
-Messages: ${userValues.statusUpdates || ""}`;
+Messages: ${statusUpdate || ""}`;
 }
 export { displayUsers, displayClickedUser };

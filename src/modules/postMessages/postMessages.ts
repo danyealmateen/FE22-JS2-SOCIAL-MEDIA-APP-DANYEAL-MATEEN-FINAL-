@@ -12,6 +12,7 @@ let userInfo = {
 }
 
 async function postMessages() {
+    
     let currentTime = moment().format("YYYY-MM-DDTHH:mm:ss.SSS")
 
     const inputForMessages = document.getElementById('inputForMessages') as HTMLInputElement;
